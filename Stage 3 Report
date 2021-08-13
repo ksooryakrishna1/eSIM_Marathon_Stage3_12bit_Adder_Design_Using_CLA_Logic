@@ -1,3 +1,16 @@
-12 Bit adder is designed using 4 bit CLA logic (uploaded CLA12bit_newway.v .
+12 Bit adder is designed using 4 bit CLA logic (uploaded adder_12bit.v
 Test bench is written to verify the design. 
 Simulation is carried using iVerilog (uploaded 12 bit adder_simu.png).
+Installed Openlane in Ubuntu 20.04 OS in the path /home/user/EICT_FDP/
+Export path is established using the command - export PDK_ROOT=/home/user/EICT_FDP/
+Installation of Docker command is checked by verifying in the path /home/user/EICT_FDP/openlane using command
+    - sudo docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6 
+If Docker window is installed properly, a Bash window will appear (uploaded bash_window.png)
+The folder 'adder_12bit' created in /home/user/EICT_FDP/openlane/designs
+Tested Verilog code (adder_12bit.v) is coped to the path  - /home/user/EICT_FDP/openlane/designs/adder_12bit/src
+To test the design - ./flow.tcl -design adder_12bit -init_design_config (uploaded design_config.png)
+To store the resulting temparory files - ./flow.tcl -design adder_12bit -tag test_eict -overwrite -interactive
+If this step is success, we get the % symbol as the prompt(uploaded config_success.png)
+For synthesis - run_synthesis (shows as successful - uploaded synthe_success.png)
+For Floorplan creation - init_floorplan and 4-verilog2def_openroad.def is created and is opened from the location
+ /home/user/EICT_FDP/openlane/designs/adder_12bit/runs/test_eict/tmp/floorplan using klayout (uploaded floorplan.png)
