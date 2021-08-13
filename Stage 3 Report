@@ -1,4 +1,4 @@
-12 Bit adder is designed using 4 bit CLA logic (uploaded adder_12bit.v)
+12 Bit adder is designed using 4 bit CLA logic (uploaded adder_12bit.v and tb_CLA12bit_newway.v)
 Test bench is written to verify the design. 
 Simulation is carried using iVerilog (uploaded 12 bit adder_simu.png).
 Installed Openlane in Ubuntu 20.04 OS in the path /home/user/EICT_FDP/
@@ -14,3 +14,13 @@ If this step is success, we get the % symbol as the prompt(uploaded config_succe
 For synthesis - run_synthesis (shows as successful - uploaded synthe_success.png)
 For Floorplan creation - init_floorplan and 4-verilog2def_openroad.def is created and is opened from the location
  /home/user/EICT_FDP/openlane/designs/adder_12bit/runs/test_eict/tmp/floorplan using klayout (uploaded floorplan.png)
+ To generate the power distribution network - gen_pdn -creates 4-pdn.def and is opened from the location
+    /home/user/EICT_FDP/openlane/designs/adder_12bit/runs/test_eict/tmp/floorplan using klayout (uploaded pdn.png)
+ To see the effect of power distribution network and to edit the floorplan.tcl file in   /home/user/EICT_FDP/openlane/configuration/ as
+    Changed the Vpitch to 180 from the existing 153.6, 
+    Hpitch  to 130 from the existing 153.18, 
+    Voffset to 25 from the existing 16.32 , 
+    Hoffset to 10 from the existing 16.65, 
+    Core Ring to 1 from 0 
+These commands run to see the changes - run_synthesis, init_floorplan, gen_pdn - 6-pdn.def is created (uploaded 6-pdn.png)
+To place the input and output pins - place_io. Giving error and not able to resolve the error (uploaded place_io.png)
