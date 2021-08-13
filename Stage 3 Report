@@ -1,4 +1,4 @@
-12 Bit adder is designed using 4 bit CLA logic (uploaded adder_12bit.v
+12 Bit adder is designed using 4 bit CLA logic (uploaded adder_12bit.v)
 Test bench is written to verify the design. 
 Simulation is carried using iVerilog (uploaded 12 bit adder_simu.png).
 Installed Openlane in Ubuntu 20.04 OS in the path /home/user/EICT_FDP/
