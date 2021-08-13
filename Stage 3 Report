@@ -1,0 +1,3 @@
+12 Bit adder is designed using 4 bit CLA logic.
+Test bench is written to verify the design. 
+Simulation is carried using iVerilog.
