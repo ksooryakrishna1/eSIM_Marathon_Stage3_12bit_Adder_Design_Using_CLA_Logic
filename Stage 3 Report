@@ -23,7 +23,7 @@
     Hoffset to 10 from the existing 16.65, 
     Core Ring to 1 from 0 
 17. These commands run to see the changes - run_synthesis, init_floorplan, gen_pdn - 6-pdn.def is created (uploaded 6-pdn.png)
-18. The above values are changed to the corresponding values.
+18. The above values are changed to the corresponding original values and saved.
 19. Power distribution netwrok startegy is changed by editing common_pdn.tcl in 
          /home/user/EICT_FDP/sky130A/libs.tech/openlane/check common_pdn.tcl 
          Edit common_pdn.tcl and add in the place of 
@@ -41,5 +41,10 @@
 			connect {{met1 met4} {met4 met5}}
 		}
 20. After editing the above in  common_pdn.tcl in /home/user/EICT_FDP/sky130A/libs.tech/openlane - Do
-             run_synthesis, init_floorplan, gen_pdn and open and see the .pdn file  (uploaded changed_pdn_network.png)     
+             run_synthesis, init_floorplan, gen_pdn and open and see the .pdn file  (uploaded changed_pdn_network.png) 
+	  After running, all thhe above steps are commented and saved.   
+	     
 21. To place the input and output pins - place_io. Giving error and not able to resolve the error (uploaded place_io.png)
+
+Reference : For all the above steps: Reference is 10 Day FDP on RISC-V VLSI Implementation Flow: RTL2GDS (27 March- 10 April, 2021), 
+organized by: Electronics & ICT Academies at- IIT Guwahati, NIT Patna, MNIT Jaipur and IIITDM Jabalpur
